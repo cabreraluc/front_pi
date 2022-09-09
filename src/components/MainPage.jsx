@@ -104,7 +104,7 @@ function MainPage(props){
     deletePokemons(sendToTrash.lista)
     setTimeout(() => {
       props.getPokemons()
-    }, 800);
+    }, 6000);
    
    }
 
