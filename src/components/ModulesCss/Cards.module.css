@@ -1,0 +1,90 @@
+.card {
+    color: rgb(255, 255, 255);
+    border-style:solid;
+    border-width: 1px;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 0px rgb(85, 67, 110);
+    background-color:rgb(113, 101, 164);
+    max-width: 30rem;
+    max-height: 19rem;
+    height:19rem;
+    margin: 0.5rem;
+    transition: .3s;
+    
+}
+.card:hover{
+  transform:translateY(-1.5rem);
+  transition: .3s;
+  background-color:rgb(140, 122, 216);
+  cursor: pointer;
+}
+
+.close_button{
+  background-color: transparent;
+  font-size: x-large;
+  border :0;
+  outline: none;
+  border: 0;
+  color: white;
+  transition: 0.4s;
+
+}
+.close_button:hover{
+  background-color: transparent;
+  font-size: x-large;
+  border :0;
+  outline: none;
+  border: 0;
+   color:rgb(255, 255, 255);
+  transition: 0.4s;
+  cursor: pointer;}
+
+.close_box{
+  display: flex;
+  flex-direction: row-reverse;
+ 
+  height: 1rem;
+ 
+}
+
+.card h3{
+  color: rgb(255, 255, 255);
+}
+
+.img{
+   
+    max-width: 11rem;
+    max-height: 10rem;
+   
+}
+
+
+a:link, a:visited {
+    text-decoration:none;
+}
+
+.restore_button{
+  color:white;
+  font-size: x-large;
+  background-color: transparent;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  margin: 2px;
+}
+.restore_button:hover{
+  color:rgb(255, 255, 255);
+  font-size: x-large;
+  background-color: transparent;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  margin: 2px;
+  cursor: pointer;
+}
+
+

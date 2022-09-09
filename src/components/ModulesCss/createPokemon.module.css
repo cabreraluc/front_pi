@@ -1,0 +1,137 @@
+.buttons{
+    font-size: large;
+  
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(109, 58, 217);
+     border-radius: 9999px;
+    padding: 0.5rem;
+    width: 13rem;
+    
+}
+
+.buttons:hover{
+    font-size: large;
+   
+    border-color: transparent;
+    background-color:  rgb(115, 89, 171);
+    border :0;
+    outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(255, 255, 255);
+    border-radius:9999px;
+    padding:0.5rem;
+    transition: .4s;
+     width: 13rem;
+     cursor: pointer;
+}
+
+
+
+
+.inputText{
+  
+
+}
+
+.text_types{
+   font-size: 1.7rem;
+   
+   color:  rgb(109, 58, 217);
+
+}
+
+.types_box{
+   
+    margin: 1rem;
+}
+
+.header{
+    
+    padding:.5rem;
+    border-bottom: solid 1px;
+    border-color: #444;
+}
+
+.container{
+   width: 90%;
+   background-color: white;
+   margin: 0px auto;
+   
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.body{
+    display: grid;
+ grid-template-columns: 50% 50%;
+ padding: 4rem;
+}
+
+.inputText{
+    width: 15rem;
+    margin: 0 auto;
+    padding: 0.7rem;
+    border-radius: 05rem;
+    border: solid 1px;
+
+}
+
+.text{
+    padding-top: 1rem;
+    color:  rgb(109, 58, 217);
+    font-size: 1.2rem;
+    
+}
+
+.types_items{
+    margin: 0.5rem;
+}
+
+.button_create{
+    font-size: 1.6rem;
+  
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(109, 58, 217);
+     border-radius: 9999px;
+    padding: 0.5rem;
+    width: 13rem;
+    margin-bottom:3rem ;
+    
+}
+
+.button_create:hover{
+    font-size: large;
+    height: 3rem;
+    border-color: transparent;
+    background-color:  rgb(115, 89, 171);
+    border :0;
+    outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(255, 255, 255);
+    border-radius:9999px;
+    padding:0.5rem;
+    transition: .4s;
+     width: 13rem;
+     margin-bottom:3rem;
+    cursor:pointer;
+}

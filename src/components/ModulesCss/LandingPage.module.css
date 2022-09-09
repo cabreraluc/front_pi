@@ -1,0 +1,75 @@
+.container{
+    font-size: large;
+    font-family: 'Silkscreen', cursive;
+    display: grid;
+    
+    max-width: 80%;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    height: 100%;
+    box-shadow: 0rem 0rem 12rem black;
+    border-radius: 3rem;
+    border: solid 10px;
+    color:  rgb(49, 17, 119);
+}
+
+.button{
+    
+    font-size: xx-large;
+  
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+    margin: 5rem;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 100;
+    color:  rgb(109, 58, 217);
+     border-radius: 9999px;
+    padding: 1rem;
+    width: 16rem;
+    
+}
+
+.button:hover{
+    font-size: xx-large;
+   
+    border-color: transparent;
+    background-color:  rgb(115, 89, 171);
+    border :0;
+    outline: none;
+    margin: 5rem;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 100;
+    color:  rgb(255, 255, 255);
+    border-radius:9999px;
+    
+    transition: .4s;
+    padding: 1rem;
+    width: 16rem;
+     cursor: pointer;
+}
+
+.img img{
+    width: 40rem;
+    height: 40rem;   
+}
+
+.body{
+    color:  rgb(109, 58, 217);
+    font-family: 'Quicksand', cursive;  
+   
+    display: flex;
+  
+    flex-direction: column;
+}
+.body h1{
+    font-weight: 100;
+    font-size: 5rem;
+
+    margin-bottom:0;
+}
+.body h3{
+   
+}

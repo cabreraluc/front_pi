@@ -1,0 +1,36 @@
+.buttons{
+    font-size: medium;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    font-family: 'Quicksand', cursive;
+    background-color: transparent;
+    border :0;
+    outline: none;
+    border: 0;
+   
+    
+    
+  
+}
+
+
+.input{
+    border-radius: 5px;
+    margin-right: -80px;
+    padding: 1rem;
+    width: 90%;
+    background-color: rgb(226, 226, 226);
+    border-radius: 2rem;
+    border-color: transparent;
+    border :0;
+    outline: none;
+    border: 0;
+    
+}
+
+.searchBar{
+   
+
+
+    
+ }

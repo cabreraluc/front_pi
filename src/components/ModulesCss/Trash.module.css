@@ -1,0 +1,282 @@
+.header{
+        display: grid;
+        background-color: rgb(255, 255, 255);
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        border-bottom: solid 1px;
+        border-color: #444;
+        padding: 0.5rem;
+}
+.buttonsHeader{
+    font-size: large;
+    
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(109, 58, 217);
+     border-radius: 9999px;
+    padding: 0.5rem;
+    margin-left: 1rem;
+  
+    
+   ;
+}
+.buttonsHeader:hover{
+    font-size: large;
+   
+    border-color: transparent;
+    background-color:  rgb(115, 89, 171);
+   outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(255, 255, 255);
+    border-radius:9999px;
+    padding:0.5rem;
+    transition: .4s;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.body{
+    background-color:rgb(255, 255, 255);
+    padding-bottom: 1rem;
+
+}
+
+.container{
+    max-width: 90%;
+    margin:0 auto;
+    background-color: white;
+}
+
+.secondButtonsHeader{
+    font-size: large;
+    
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(109, 58, 217);
+     border-radius: 9999px;
+    padding: 0.5rem;
+    
+    max-width: 10rem;
+    margin: 0 auto;
+
+}
+
+.secondButtonsHeader:hover{
+    font-size: large;
+   
+    border-color: transparent;
+    background-color:  rgb(115, 89, 171);
+   outline: none;
+    border: 0;
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(255, 255, 255);
+    border-radius:9999px;
+    padding:0.5rem;
+    transition: .4s;
+    margin-left: 1rem;
+    max-width: 10rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+
+.card_box{
+    background-color:rgb(121, 110, 171);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    margin:2rem;
+   
+}
+
+.card{
+     display: grid;
+    grid-template-columns: 10% 70% 20%;
+    max-height: 10rem;
+    margin: 1rem;
+    background-color:rgb(173, 137, 221);;
+    border-radius: 1rem;
+    color: white;
+    border: solid 1px;
+    border-color: black;
+    box-shadow: 5px 5px 0px rgb(42, 14, 81);
+
+}
+.card img{
+    padding-left: 2.5rem;
+    padding-top: 1rem;
+    max-height: 10rem;
+    max-width: 8rem;
+
+}
+
+.card_data{
+  margin: 1rem;  
+  
+  margin-left: 5rem;
+}
+.card_data h3{
+    font-size: x-large;
+   
+}
+
+.buttons_card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    
+}
+
+.button_restore{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(17, 126, 42);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: large;
+    box-shadow: 3px 3px 0px black;
+    cursor: pointer;
+}
+.button_restore:hover{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(13, 199, 56);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: large;
+    box-shadow: 3px 3px 0px black;
+    cursor: pointer;
+}
+
+
+
+.button_restore_pressed{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(17, 126, 42);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: large;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+}
+.button_restore_pressed:hover{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(13, 199, 56);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: large;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.button_delete{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(180, 50, 50);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: x-large;
+    box-shadow: 3px 3px 0px black;
+    cursor: pointer;
+
+}
+
+.button_delete:hover{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(255, 0, 0);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: x-large;
+    box-shadow: 3px 3px 0px black;
+    cursor: pointer;
+
+}
+
+.button_delete_pressed{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(180, 50, 50);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: x-large;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+   
+}
+.button_delete_pressed:hover{
+    width: 3rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border-radius: 9999px;
+    color: rgb(0, 0, 0);
+    background-color:rgb(255, 0, 0);
+    border: solid 1px;
+    border-color: rgb(0, 0, 0);
+    font-size: x-large;
+    position: relative;
+    left: 4px;
+    top: 4px;
+    cursor: pointer;
+   
+}
+
+.empty{
+    background-color: white;
+    font-size:2rem ;
+    padding-bottom:2rem ;
+}
