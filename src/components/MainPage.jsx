@@ -68,7 +68,7 @@ function MainPage(props){
     props.state.onePokemon = {}
     setTimeout(() => {
       props.getPokemons()
-    }, 400);
+    }, 800);
    
 
    }
@@ -104,7 +104,7 @@ function MainPage(props){
     deletePokemons(sendToTrash.lista)
     setTimeout(() => {
       props.getPokemons()
-    }, 400);
+    }, 800);
    
    }
 

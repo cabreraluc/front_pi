@@ -29,7 +29,7 @@ function aplicarCambios(){
     restoreFromTrash(stateRestore.lista)
     setTimeout(() => {
         dispatch(getTrash())
-    }, 200);
+    }, 800);
     
     setStateRestore({lista:[]})
     setStateDelete({lista:[]})
