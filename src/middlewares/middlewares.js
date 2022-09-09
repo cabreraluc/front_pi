@@ -1,6 +1,6 @@
 export const deletePokemons = (lista)=>{
  
-    fetch("http://localhost:3001/delete",{
+    fetch("https://pokedex-h.herokuapp.com/delete",{
             method: "POST",
             headers:{"Accept": "application/json",
            "Content-Type":"application/json"},
@@ -11,7 +11,7 @@ export const deletePokemons = (lista)=>{
   }
   
   export const deleteFromTrash = (lista)=>{
-    fetch("http://localhost:3001/deleteFromTrash",{
+    fetch("https://pokedex-h.herokuapp.com/deleteFromTrash",{
          method: "POST",
          headers:{"Accept": "application/json",
         "Content-Type":"application/json"},
@@ -25,7 +25,7 @@ export const deletePokemons = (lista)=>{
   
   
   export const restoreFromTrash = (lista)=>{
-     fetch("http://localhost:3001/RestoreFromTrash",{
+     fetch("https://pokedex-h.herokuapp.com/RestoreFromTrash",{
           method: "POST",
           headers:{"Accept": "application/json",
          "Content-Type":"application/json"},

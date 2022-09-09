@@ -6,7 +6,7 @@ import {GET_POKEMONS, FILTER_BY_TYPE_, RESTORE_POKEMONS,DELETE_POKEMONS, GET_POK
 export function getPokemons(){
 
        return async function(dispatch){
-      const a = await fetch("http://localhost:3001/pokemons/")
+      const a = await fetch("https://pokedex-h.herokuapp.com/pokemons/")
       const b = await a.json()
     
         dispatch({
@@ -18,7 +18,7 @@ export function getPokemons(){
 export function restorePokemons(){
 
   return async function(dispatch){
- const a = await fetch("http://localhost:3001/pokemons/restorePokemons")
+ const a = await fetch("https://pokedex-h.herokuapp.com/pokemons/restorePokemons")
  const b = await a.json()
 
    dispatch({
@@ -32,7 +32,7 @@ export function restorePokemons(){
 export function getTrash(){
 
   return async function(dispatch){
-  const a = await fetch("http://localhost:3001/deleted")
+  const a = await fetch("https://pokedex-h.herokuapp.com/deleted")
 
   const b = await a.json()
   if(b.message){dispatch({type:GET_TRASH,payload:b})}
@@ -50,7 +50,7 @@ export const getPokemonsByName = (name)=>{
 
 
             return function(dispatch) {
-                return fetch(`http://localhost:3001/pokemons?name=${name}`)
+                return fetch(`https://pokedex-h.herokuapp.com/pokemons?name=${name}`)
                   .then(response => response.json())
                   .then(json => {
                     dispatch({ type: GET_POKEMONS_BY_NAME, payload: json });
@@ -62,7 +62,7 @@ export const getPokemonsByName = (name)=>{
 export const getPokemonsById = (id)=>{
     
         return function(dispatch) {
-            return fetch(`http://localhost:3001/pokemons/${id}`)
+            return fetch(`https://pokedex-h.herokuapp.com/pokemons/${id}`)
               .then(response => response.json())
               .then(json => {
                 dispatch({ type: GET_POKEMONS_BY_ID, payload: json });
@@ -74,7 +74,7 @@ export const getPokemonsById = (id)=>{
 export const getTypes= ()=>{
 
         return function(dispatch) {
-            return fetch(`http://localhost:3001/types`)
+            return fetch(`https://pokedex-h.herokuapp.com/types`)
               .then(response => response.json())
               .then(json => {
                 dispatch({ type: GET_TYPES, payload: json });

@@ -80,7 +80,7 @@ switch (type) {
             }
     }
      case POST_POKEMON:{
-          fetch("http://localhost:3001/pokemons/",{
+          fetch("https://pokedex-h.herokuapp.com/pokemons/",{
               method: "POST",
               headers:{"Accept": "application/json",
              "Content-Type":"application/json"},
