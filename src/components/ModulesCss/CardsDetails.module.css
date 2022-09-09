@@ -13,6 +13,7 @@
  padding: 0.5rem;
  border-bottom: solid 1px;
  border-color: #444;
+ background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235))
 }
 
 .button{
@@ -48,6 +49,7 @@
     transition: .4s;
      width: 13rem;
      cursor: pointer;
+     background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }
 
 img{
@@ -58,6 +60,7 @@ img{
 .body{
     display: grid;
    grid-template-columns: 40% 60%;
+   background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235))
 }
 .stats{
     display: flex;
@@ -66,6 +69,7 @@ img{
     margin: 3rem;
     color:  rgb(87, 47, 174);
     font-size: 1.5rem;
+    
 }
 
 .stats span{
@@ -92,3 +96,8 @@ img{
    color: white;
 }
 
+
+.Loader{
+    padding: 1rem;
+    background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235))
+}

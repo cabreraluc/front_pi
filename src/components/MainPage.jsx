@@ -41,6 +41,9 @@ function MainPage(props){
     props.getTypes() 
     },[])
 
+
+
+
    const handlerNext = ()=>{
     if(current<CountOf){
     setNum1(num1 + PokemonsPorPage)
@@ -104,7 +107,7 @@ function MainPage(props){
     deletePokemons(sendToTrash.lista)
     setTimeout(() => {
       props.getPokemons()
-    }, 6000);
+    }, 800);
    
    }
 
@@ -120,7 +123,7 @@ function MainPage(props){
 
     return  (
 
-            <div className={styles.container}>
+            <div id="container" className={styles.container}>
        
               
     {props.state.pokemonFiltered.length > 0 && props.state.tipos.length && !props.state.onePokemon.message ?  
@@ -231,9 +234,9 @@ function MainPage(props){
                   <div className={styles.body}>
                 
                    {current>=2?
-                    <button onClick={handlerPrev} className={styles.buttonsNavegation}><img className={styles.img_flecha_izquierda} src={img}></img></button>
+                    <button onClick={handlerPrev} className={styles.buttonsNavegation}><p className={styles.textInButtonNavegation}>{`<`}</p></button>
                    :
-                   <button onClick={handlerPrev} className={styles.buttonsNavegation}><img className={styles.img_flecha_izquierda_disabled} src={img}></img></button>
+                   <button onClick={handlerPrev} className={styles.buttonsNavegation}><p className={styles.textInButtonNavegation_disabled}>{`<`}</p></button>
                    }
                    
                   
@@ -243,15 +246,15 @@ function MainPage(props){
                     <div className ={styles.cards}>
                     {props.state.pokemonFiltered.slice(num1,num2).map(element=>(
                     
-                    <Cards sendToTrashFilter={sendToTrashFilter} lista={sendToTrash.lista} handlerSendToTrash={handlerSendToTrash} data={element} key={element.id}/>
+                    <div id="card" ><Cards sendToTrashFilter={sendToTrashFilter} lista={sendToTrash.lista} handlerSendToTrash={handlerSendToTrash} data={element} key={element.id} /></div>
                    
                     )
                     )}
                     </div>
                     {current<CountOf?
-                    <button  onClick={handlerNext} className={styles.buttonsNavegation}> <img className={styles.img_flecha_derecha} src={img}></img></button>
+                    <button  onClick={handlerNext} className={styles.buttonsNavegation}> <p className={styles.textInButtonNavegation}>{`>`}</p></button>
                     :
-                    <button  onClick={handlerNext} className={styles.buttonsNavegation}> <img className={styles.img_flecha_derecha_disabled} src={img}></img></button>
+                    <button  onClick={handlerNext} className={styles.buttonsNavegation}> <p className={styles.textInButtonNavegation_disabled}>{`>`}</p></button>
                     }
                    
                     

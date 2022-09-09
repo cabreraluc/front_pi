@@ -31,6 +31,7 @@
     transition: .4s;
      width: 13rem;
      cursor: pointer;
+     background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }
 
 
@@ -64,13 +65,16 @@
    width: 90%;
    background-color: white;
    margin: 0px auto;
-   
+   background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235));
 }
 
 .inputs{
     display: flex;
     flex-direction: column;
     
+}
+.inputs input{
+    background-image: linear-gradient(to right,  rgb(209, 206, 225),  rgb(229, 226, 233),  rgb(237, 235, 246));
 }
 
 .body{
@@ -134,4 +138,5 @@
      width: 13rem;
      margin-bottom:3rem;
     cursor:pointer;
+    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }

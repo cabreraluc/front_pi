@@ -5,13 +5,15 @@
     
     max-width: 80%;
     grid-template-columns: 50% 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(171, 136, 226);
     margin: 0 auto;
     height: 100%;
     box-shadow: 0rem 0rem 12rem black;
     border-radius: 3rem;
-    border: solid 10px;
-    color:  rgb(49, 17, 119);
+  
+    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
+    background-image: linear-gradient(to right,  rgb(85, 74, 121), rgb(140, 122, 221),  rgb(79, 65, 124));
+    
 }
 
 .button{
@@ -25,7 +27,7 @@
     margin: 5rem;
     font-family: 'Quicksand', cursive;  
     font-weight: 100;
-    color:  rgb(109, 58, 217);
+    color:  rgb(255, 255, 255);
      border-radius: 9999px;
     padding: 1rem;
     width: 16rem;
@@ -52,12 +54,12 @@
 }
 
 .img img{
-    width: 40rem;
-    height: 40rem;   
+ height: 100%;
+ width: 100%; 
 }
 
 .body{
-    color:  rgb(109, 58, 217);
+    color:  rgb(255, 255, 255);
     font-family: 'Quicksand', cursive;  
    
     display: flex;

@@ -6,6 +6,9 @@
   background-color: white;
   justify-content: center;
 
+
+    background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235));
+  
 }
 
 
@@ -19,7 +22,11 @@
     margin-top: 50rem;
     display: flex;
     margin-top: 2rem;
-    background-color: rgb(173, 137, 221);
+    background: rgb(173, 137, 221);
+
+    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
+    background-image: linear-gradient(to right,  rgb(67, 53, 113),  rgb(173, 137, 221),  rgb(79, 65, 124));
+  
     border-radius: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -33,13 +40,14 @@
 
 .header{
    display:grid;
-   background-color: rgb(255, 255, 255);
+   background-color: rgb(38, 37, 87);
    align-items: center;
    grid-template-columns: 15% 50% 15%  15%;
    justify-content: center;
    border-bottom: solid 1px;
    border-color: #444;
    padding: 0.5rem;
+   background-image: linear-gradient(to right,   rgb(201, 190, 235),  rgb(211, 199, 227),  rgb(201, 190, 235));
 }
 
 .buttonsHeader{
@@ -73,6 +81,7 @@
     transition: .4s;
     margin-left: 1rem;
     cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
     
 }
 
@@ -100,37 +109,9 @@
         border: 1px solid #aaa;
         box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
         border-radius: .3em;
-       
+        background-image: linear-gradient(to right,  rgb(215, 211, 231),  rgb(229, 226, 233),  rgb(213, 207, 233))
       }
 
-.img_flecha_derecha{
-  height: 20rem;
-  opacity: 30%;
-  width: 2rem;
-  
-}
-
-.img_flecha_izquierda{
-  height: 20rem;
-  width: 2rem;
-  opacity: 30%;
-  transform: rotate(180deg);
-}
-
-.img_flecha_derecha_disabled{
-    height: 20rem;
-    opacity: 10%;
-    width: 2rem;
-    
-  }
-  
-  .img_flecha_izquierda_disabled{
-    height: 20rem;
-    width: 2rem;
-    opacity: 10%;
-    transform: rotate(180deg);
-  }
-   
 
      
 
@@ -155,6 +136,7 @@
     background-color:red;
     transition: .4s;
     cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(182, 8, 8),  rgb(221, 21, 21),  rgb(166, 14, 14))
 }
 
 .delete_box{
@@ -175,6 +157,7 @@
     color: rgb(98, 54, 200); 
     border-radius: 2rem;
     padding: 1rem;
+    
 }
 
 .trash:hover{
@@ -188,6 +171,7 @@
     padding: 1rem;
     background-color:  rgb(115, 89, 171);
     cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }
 
 
@@ -208,6 +192,10 @@ grid-template-columns: 32% 32% 32% ;
 width: 100%;
 justify-content: center;
 
+}
+
+.rotateCards{
+background-color: red;
 }
 
 .prueba{
@@ -232,11 +220,11 @@ justify-content: center;
 .buttonsNavegation{
    
     border-color: transparent;
-    width: 4rem;
+    width: 5%;
     border :0;
     outline: none;
     border: 0;
-    background-color: rgb(173, 137, 221);
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -262,10 +250,26 @@ justify-content: center;
 
 .footer_info{
     align-items: center;
-    height: 3rem;
-    background-color: rgb(32, 21, 65);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(61, 52, 90);
    
 }
 .footer_info p{
     color: white;
+   
+}
+
+
+.textInButtonNavegation{
+    transform: scale(2, 20);
+    font-weight: 100;
+    color: rgb(164, 151, 193);
+}
+
+.textInButtonNavegation_disabled{
+    transform: scale(2, 20);
+    font-weight: 100;
+    color: rgb(164, 151, 193);
+    opacity: 20%;
 }

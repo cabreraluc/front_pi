@@ -19,12 +19,12 @@
     margin-right: -80px;
     padding: 1rem;
     width: 90%;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(217, 211, 235);
     border-radius: 2rem;
     border-color: transparent;
-    border :0;
     outline: none;
-    border: 0;
+    border: none;
+    
     
 }
 

@@ -74,9 +74,10 @@ export default function CardDetails(props){
              <Message></Message></div>)
 
            :!state.onePokemon.name?
+           <div className={styles.Loader}>
 
-           <div><h1>Cargando...</h1></div>
-
+           <Loader ></Loader>
+            </div>
 
            : false}
         

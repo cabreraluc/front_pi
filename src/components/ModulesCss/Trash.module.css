@@ -7,6 +7,7 @@
         border-bottom: solid 1px;
         border-color: #444;
         padding: 0.5rem;
+        background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235));
 }
 .buttonsHeader{
     font-size: large;
@@ -41,6 +42,7 @@
     transition: .4s;
     margin-left: 1rem;
     cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }
 
 .body{
@@ -52,7 +54,7 @@
 .container{
     max-width: 90%;
     margin:0 auto;
-    background-color: white;
+    background-color:transparent;
 }
 
 .secondButtonsHeader{
@@ -91,6 +93,7 @@
     max-width: 10rem;
     margin: 0 auto;
     cursor: pointer;
+    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
 }
 
 
@@ -100,6 +103,8 @@
     flex-direction: column;
     border-radius: 1rem;
     margin:2rem;
+    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
+    background-image: linear-gradient(to right,  rgb(67, 53, 113),  rgb(173, 137, 221),  rgb(79, 65, 124));
    
 }
 
@@ -109,6 +114,8 @@
     max-height: 10rem;
     margin: 1rem;
     background-color:rgb(173, 137, 221);;
+    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
+    background-image: linear-gradient(to right,  rgb(98, 81, 156),  rgb(173, 137, 221),  rgb(79, 65, 124));
     border-radius: 1rem;
     color: white;
     border: solid 1px;
@@ -155,6 +162,8 @@
     font-size: large;
     box-shadow: 3px 3px 0px black;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
+    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(17, 126, 42), rgb(11, 90, 30));
 }
 .button_restore:hover{
     width: 3rem;
@@ -168,6 +177,8 @@
     font-size: large;
     box-shadow: 3px 3px 0px black;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
+    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(38, 182, 71), rgb(11, 90, 30));
 }
 
 
@@ -186,6 +197,8 @@
     left: 4px;
     top: 4px;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
+    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(17, 126, 42), rgb(11, 90, 30));
 }
 .button_restore_pressed:hover{
     width: 3rem;
@@ -201,6 +214,8 @@
     left: 4px;
     top: 4px;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
+    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(38, 182, 71), rgb(11, 90, 30));
 }
 
 
@@ -224,6 +239,9 @@
     font-size: x-large;
     box-shadow: 3px 3px 0px black;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
+    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(180, 50, 50),rgb(140, 32, 32));
+
 
 }
 
@@ -239,6 +257,8 @@
     font-size: x-large;
     box-shadow: 3px 3px 0px black;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
+    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(222, 28, 28),rgb(140, 32, 32));
 
 }
 
@@ -256,6 +276,9 @@
     left: 4px;
     top: 4px;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
+    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(180, 50, 50),rgb(140, 32, 32));
+
    
 }
 .button_delete_pressed:hover{
@@ -272,11 +295,13 @@
     left: 4px;
     top: 4px;
     cursor: pointer;
-   
+    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
+    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(222, 28, 28),rgb(140, 32, 32));
+
 }
 
 .empty{
-    background-color: white;
+    background-color:transparent;
     font-size:2rem ;
-    padding-bottom:2rem ;
+    color: white;
 }
