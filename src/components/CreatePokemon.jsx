@@ -83,7 +83,10 @@ export default  function CreateTuPokemon(){
 
     const enviar = ()=>{
         dispatch(postPokemon(formulario))
-        window.location.href = "/MainPage"
+        setTimeout(() => {
+            window.location.href = "/MainPage"
+        }, 300);
+      
     }
 
     const handleTypes = (event)=>{
