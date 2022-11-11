@@ -53,20 +53,21 @@
 }
 
 img{
-    width: 30rem;
-   
+   width: 80%;
 }
 
 .body{
-    display: grid;
-   grid-template-columns: 40% 60%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
    background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235))
 }
 .stats{
     display: flex;
     flex-direction: column;
-    
-    margin: 3rem;
+    align-items: center;
+    justify-content: center;
     color:  rgb(87, 47, 174);
     font-size: 1.5rem;
     
@@ -78,9 +79,11 @@ img{
 }
 
 .img_name{
-   display: grid;
-   padding: 3rem;
-    
+   display: flex;
+   width: 50%;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
    
 }
 .img_name span{

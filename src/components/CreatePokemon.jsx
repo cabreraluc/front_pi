@@ -117,7 +117,8 @@ export default  function CreateTuPokemon(){
              </div>
              <div>
              <div className={styles.body}>
-              <form>
+                <div className={styles.inputs_container}>
+                <form>
                 <div className={styles.inputs}>
                  <span className={styles.text}>Name*</span>
                  <input   value={formulario.name} name="name" onChange={(event) => {subirAlState(event)}} className={styles.inputText}/>
@@ -138,6 +139,8 @@ export default  function CreateTuPokemon(){
                  <input name="img" onChange={(event) => {subirAlState(event)}} className={styles.inputText}/>
                 </div>  
                </form>
+                </div>
+ 
 
                <div className={styles.types}>
                   <span className={styles.text_types}>Select types</span>

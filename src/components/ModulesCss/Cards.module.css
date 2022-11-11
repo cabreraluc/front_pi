@@ -7,7 +7,7 @@
     border-radius: 1rem;
     box-shadow: 5px 5px 0px rgb(85, 67, 110);
     background-color:rgb(113, 101, 164);
-    max-width: 30rem;
+    min-width: 15rem;
     max-height: 19rem;
     height:19rem;
     margin: 0.5rem;

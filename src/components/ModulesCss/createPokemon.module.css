@@ -10,7 +10,7 @@
     font-weight: 600;
     color:  rgb(109, 58, 217);
      border-radius: 9999px;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 13rem;
     
 }
@@ -27,7 +27,7 @@
     font-weight: 600;
     color:  rgb(255, 255, 255);
     border-radius:9999px;
-    padding:0.5rem;
+  
     transition: .4s;
      width: 13rem;
      cursor: pointer;
@@ -54,6 +54,10 @@
     margin: 1rem;
 }
 
+.types{
+    margin: 3rem 0;
+}
+
 .header{
     
     padding:.5rem;
@@ -72,15 +76,22 @@
     display: flex;
     flex-direction: column;
     
+    
+}
+.inputs_container{
+ 
+    margin: 3rem 0;
 }
 .inputs input{
     background-image: linear-gradient(to right,  rgb(209, 206, 225),  rgb(229, 226, 233),  rgb(237, 235, 246));
 }
 
 .body{
-    display: grid;
- grid-template-columns: 50% 50%;
- padding: 4rem;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content:space-evenly;
+    
 }
 
 .inputText{
@@ -104,7 +115,7 @@
 }
 
 .button_create{
-    font-size: 1.6rem;
+    font-size: x-large;
   
     border-color: transparent;
     background-color:transparent;
@@ -115,15 +126,14 @@
     font-weight: 600;
     color:  rgb(109, 58, 217);
      border-radius: 9999px;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 13rem;
     margin-bottom:3rem ;
     
 }
 
 .button_create:hover{
-    font-size: large;
-    height: 3rem;
+    font-size: x-large;
     border-color: transparent;
     background-color:  rgb(115, 89, 171);
     border :0;
@@ -133,7 +143,7 @@
     font-weight: 600;
     color:  rgb(255, 255, 255);
     border-radius:9999px;
-    padding:0.5rem;
+  
     transition: .4s;
      width: 13rem;
      margin-bottom:3rem;

@@ -13,13 +13,14 @@ import styles from "./ModulesCss/MainPage.module.css"
 import {FaRegTrashAlt} from "react-icons/fa"
 import img from "../imagen-flecha.png"
 import {VscDebugRestart} from "react-icons/vsc"
+import Swal from 'sweetalert2'
 
 
 
 
 
 
-let PokemonsPorPage = 6
+let PokemonsPorPage = 8
 
 function MainPage(props){
 
@@ -104,17 +105,29 @@ function MainPage(props){
    }
 
    const handlerDelete = () =>{
-    deletePokemons(sendToTrash.lista)
-    setTimeout(() => {
-      props.getPokemons()
-    }, 800);
-   
+    Swal.fire({
+      title: 'Are you want to send that pokemons to recycle bin?',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+
+        deletePokemons(sendToTrash.lista)
+        setTimeout(() => {
+          props.getPokemons()
+        }, 800);
+       
+      }
+    })
+
    }
 
    
  
    const handlerSendToTrash = (data)=>{
     if(!sendToTrash.lista.includes(data)){
+
     setSendToTrash({...sendToTrash,lista:[...sendToTrash.lista,data]})
    }
    
