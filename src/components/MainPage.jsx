@@ -20,7 +20,7 @@ import Swal from 'sweetalert2'
 
 
 
-let PokemonsPorPage = 8
+let PokemonsPorPage =6 
 
 function MainPage(props){
 
