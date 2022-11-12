@@ -13,6 +13,7 @@ import styles from "./ModulesCss/MainPage.module.css"
 import {FaRegTrashAlt} from "react-icons/fa"
 import img from "../imagen-flecha.png"
 import {VscDebugRestart} from "react-icons/vsc"
+import {IoIosOptions} from "react-icons/io"
 import Swal from 'sweetalert2'
 
 
@@ -142,10 +143,15 @@ function MainPage(props){
     {props.state.pokemonFiltered.length > 0 && props.state.tipos.length && !props.state.onePokemon.message ?  
 
 <div className={styles.content}>
- <header>
+ 
                 
                    
                 <div className={styles.header}>
+
+
+                  <button className={styles.buttonsHeader_options}>
+                    <IoIosOptions/>
+                  </button>
                 
                     <button onClick={()=>{
                       props.getPokemons()
@@ -163,14 +169,14 @@ function MainPage(props){
                
                   </div>      
               
- </header>
+ 
 
                   <div>
                 
                     <div className={styles.filter_box}>
                    
                     <form>
-                      <label>Api/Db</label>
+                      <label className={styles.filter_text}>Api/Db</label>
                       <select className={styles.filters} name="" id="" onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
                         <option disabled={true} value= "base">-------</option>
                         <option value="api">API</option>
@@ -179,7 +185,7 @@ function MainPage(props){
                     </form>
                     
                     <form>
-                      <label>By attack</label>
+                      <label className={styles.filter_text}>By attack</label>
                       <select className={styles.filters} onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
                         <option  disabled={true} value="base">-------</option>
                         <option value="fuerte">Strongest</option>
@@ -188,7 +194,7 @@ function MainPage(props){
                     </form>
                     
                     <form>
-                      <label>Alphabetic</label>
+                      <label className={styles.filter_text}>Alphabetic</label>
                       <select  className={styles.filters} name="" id=""  onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
                         <option disabled={true} value="base">-------</option>
                         <option value="a-z">A-Z</option>
@@ -197,7 +203,7 @@ function MainPage(props){
                     </form>
                  
                     <form>
-                    <label>Type</label>
+                    <label className={styles.filter_text}>Type</label>
                       <select  className={styles.filters} name="tipos" onChange={(event)=>{tiposSelector(event.target.value)}} defaultValue="base">
                         <option  disabled={true} value="base">-------</option>
                         {props.state.tipos.map(element => {
@@ -207,11 +213,7 @@ function MainPage(props){
                     </form>
 
                       
-                       <Link to="/Trash">
-                       <button className={styles.trash}>
-                      <FaRegTrashAlt />
-                      </button>
-                       </Link>
+                       
                      
 
                         {/* <div>
@@ -245,8 +247,16 @@ function MainPage(props){
                    
 
                   <div className={styles.body}>
-                
-                   {current>=2?
+                    <div className={styles.trash_box}>
+                      <Link to="/Trash">
+                       <button className={styles.trash}>
+                        <FaRegTrashAlt /> Recycle bin
+                       </button>
+                      </Link>
+                    </div>
+
+                    <div className={styles.cards_arrows}>
+                    {current>=2?
                     <button onClick={handlerPrev} className={styles.buttonsNavegation}><p className={styles.textInButtonNavegation}>{`<`}</p></button>
                    :
                    <button onClick={handlerPrev} className={styles.buttonsNavegation}><p className={styles.textInButtonNavegation_disabled}>{`<`}</p></button>
@@ -270,12 +280,15 @@ function MainPage(props){
                     <button  onClick={handlerNext} className={styles.buttonsNavegation}> <p className={styles.textInButtonNavegation_disabled}>{`>`}</p></button>
                     }
                    
+                    </div>
+                
+                  
                     
                   </div>
 
                   
-                  <footer className={styles}>
-                  <div>  
+                 
+                  <div className={styles.numbers_nav_box}>  
                   {
                     arrCountOf.map((e,i)=> (
                         
@@ -285,7 +298,8 @@ function MainPage(props){
                             setNum2((i+1)*PokemonsPorPage)
                             setCurrent(i+1)
                         }
-                     }className={styles.buttonsNavigation}>{i + 1}</button>
+                     }className={styles.buttonsNavigation}>{i + 1}
+                     </button>
                      
                      )
                     )
@@ -300,7 +314,7 @@ function MainPage(props){
                     </p>
                     <p></p>
                   </div>
-                   </footer>
+                   
                     </div>:
 
                 props.state.pokemonFiltered.length === 1 && !props.state.onePokemon.message?
@@ -334,7 +348,7 @@ function MainPage(props){
 
                     :props.state.allPokemons.length===0&&props.state.tipos.length===0?
 
-                    <div><h1>Loading...</h1></div>:false}
+                    <div><h5>Loading...</h5></div>:false}
 
 
                    

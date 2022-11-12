@@ -5,11 +5,10 @@
     border-color: black;
     border-width: 1px;
     border-radius: 1rem;
-    box-shadow: 5px 5px 0px rgb(85, 67, 110);
+    box-shadow: 0px 0px 1rem rgb(85, 67, 110,0.5);
     background-color:rgb(113, 101, 164);
     min-width: 15rem;
-    max-height: 19rem;
-    height:19rem;
+    
     margin: 0.5rem;
     transition: .3s;
     background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
@@ -56,6 +55,15 @@
 
 .card h3{
   color: rgb(255, 255, 255);
+  font-size: medium;
+}
+
+
+
+.types{
+  font-size: auto;
+  background-color: transparent;
+  color: white;
 }
 
 .img{

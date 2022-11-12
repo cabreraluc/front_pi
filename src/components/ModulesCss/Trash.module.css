@@ -1,48 +1,40 @@
 .header{
-        display: grid;
-        background-color: rgb(255, 255, 255);
-        align-items: center;
-        grid-template-columns: 50% 50%;
-        justify-content: center;
-        border-bottom: solid 1px;
-        border-color: #444;
-        padding: 0.5rem;
-        background-image: linear-gradient(to right,  rgb(195, 186, 231),  rgb(229, 226, 233),  rgb(201, 190, 235));
+    display:flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+ justify-content: space-evenly;
+    border-bottom: solid 1px;
+    border-color: #444;
+    background-color: white;   
+   width: 100%;
 }
 .buttonsHeader{
-    font-size: large;
-    
+    font-size: auto;
+  
     border-color: transparent;
     background-color:transparent;
     border :0;
     outline: none;
-
+ 
     font-family: 'Quicksand', cursive;  
     font-weight: 600;
     color:  rgb(109, 58, 217);
-     border-radius: 9999px;
-    padding: 0.5rem;
-    margin-left: 1rem;
+    border-radius: 9999px;
+    padding: 0.7rem;
+    transition: 0.2s;
+    margin: 0.5rem;
   
     
    ;
 }
 .buttonsHeader:hover{
-    font-size: large;
-   
-    border-color: transparent;
-    background-color:  rgb(115, 89, 171);
-   outline: none;
-    border: 0;
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color:  rgb(255, 255, 255);
-    border-radius:9999px;
-    padding:0.5rem;
     transition: .4s;
-    margin-left: 1rem;
-    cursor: pointer;
-    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
+    color: white;
+     cursor: pointer;
+     transition: 0.2s;
+ background-color:  rgb(115, 89, 171);    
 }
 
 .body{
@@ -54,80 +46,31 @@
 .container{
     max-width: 90%;
     margin:0 auto;
-    background-color:transparent;
+    background-color: white;   
 }
 
-.secondButtonsHeader{
-    font-size: large;
-    
-    border-color: transparent;
-    background-color:transparent;
-    border :0;
-    outline: none;
-
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color:  rgb(109, 58, 217);
-     border-radius: 9999px;
-    padding: 0.5rem;
-    
-    max-width: 10rem;
-    margin: 0 auto;
-
-}
-
-.secondButtonsHeader:hover{
-    font-size: large;
-   
-    border-color: transparent;
-    background-color:  rgb(115, 89, 171);
-   outline: none;
-    border: 0;
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color:  rgb(255, 255, 255);
-    border-radius:9999px;
-    padding:0.5rem;
-    transition: .4s;
-    margin-left: 1rem;
-    max-width: 10rem;
-    margin: 0 auto;
-    cursor: pointer;
-    background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
-}
 
 
 .card_box{
-    background-color:rgb(121, 110, 171);
+        background-color: white;   
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
     margin:2rem;
-    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
-    background-image: linear-gradient(to right,  rgb(67, 53, 113),  rgb(173, 137, 221),  rgb(79, 65, 124));
-   
+    background-color: white;   
 }
 
 .card{
-     display: grid;
-    grid-template-columns: 10% 70% 20%;
-    max-height: 10rem;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(208, 204, 239);
     margin: 1rem;
-    background-color:rgb(173, 137, 221);;
-    background-image: -webkit-linear-gradient(to right,  rgb(111, 88, 188), rgb(173, 137, 221), rgb(107, 88, 170));
-    background-image: linear-gradient(to right,  rgb(98, 81, 156),  rgb(173, 137, 221),  rgb(79, 65, 124));
-    border-radius: 1rem;
-    color: white;
-    border: solid 1px;
-    border-color: black;
-    box-shadow: 5px 5px 0px rgb(42, 14, 81);
+    justify-content: center;
+    justify-content: space-evenly;
 
 }
 .card img{
-    padding-left: 2.5rem;
-    padding-top: 1rem;
-    max-height: 10rem;
-    max-width: 8rem;
+  max-width: 5rem;
 
 }
 
@@ -137,7 +80,7 @@
   margin-left: 5rem;
 }
 .card_data h3{
-    font-size: x-large;
+    font-size: auto;
    
 }
 
@@ -302,6 +245,6 @@
 
 .empty{
     background-color:transparent;
-    font-size:2rem ;
-    color: white;
+    font-size:medium ;
+    color: rgb(0, 0, 0);
 }

@@ -33,7 +33,7 @@ const dispatch = useDispatch()
             <h3 className={styles.name} >{data.name}</h3>
             <img className={styles.img} src={data.img} alt="pokemon_img" />
             <div className={styles.types_container}>
-            <h3 className={styles.types}>{data.type}</h3>
+            <h4 className={styles.types}>{data.type}</h4>
             </div>
             </Link>
            </div>

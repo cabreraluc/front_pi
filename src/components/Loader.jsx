@@ -3,7 +3,7 @@
 export default function Loader(){
     return(
         <div>
-          <h1>Loading...</h1>
+          <h5>Loading...</h5>
         </div>
     )
 }

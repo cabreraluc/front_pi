@@ -1,5 +1,5 @@
 .buttons{
-    font-size: medium;
+    font-size: xx-large;
     border-radius: 9999px;
     color: rgb(0, 0, 0);
     font-family: 'Quicksand', cursive;
@@ -7,10 +7,10 @@
     border :0;
     outline: none;
     border: 0;
-    font-size: 2.5rem;
-    margin-left: -3.2rem;
+  
+    margin-left: -2.5rem;
     color: rgb(70, 35, 153); 
-    margin-bottom: -0.6rem;
+    margin-bottom: -0.5rem;
     cursor: pointer;
 }
 
@@ -18,14 +18,14 @@
 .input{
     border-radius: 5px;
     
-    padding: 1rem;
+  
     background-color: rgb(217, 211, 235);
     border-radius: 2rem;
     border-color: transparent;
     outline: none;
     border: none;
     padding-right: 3rem;
-   
+    padding-left: 0.9rem;
     
 }
 

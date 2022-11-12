@@ -83,16 +83,14 @@ function handlerSubirAlStateRestore(element){
 
 return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div>
+      
+        <div className={styles.header}>
          <Link to ="/MainPage">
          <button className={styles.buttonsHeader}>Return to main page</button>
          </Link>
-         </div>
-         <button className={styles.secondButtonsHeader} onClick={()=>{aplicarCambios()}} >Apply changes</button>
-      </header>
-
-      <body className={styles.body}>
+         <button className={styles.buttonsHeader} onClick={()=>{aplicarCambios()}} >Apply changes</button>
+        </div>
+      <div className={styles.body}>
       
                 <div className={styles.card_box}>
              {!state.trashPokemons.length?
@@ -156,8 +154,8 @@ return (
             </div>
                    
                    
-          </body>
-                    </div>
+          </div>
+        </div>
 )
 
 }

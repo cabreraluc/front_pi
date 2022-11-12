@@ -45,10 +45,13 @@ export default function CardDetails(props){
             </div>
            <div className={styles.body}>
             <div className={styles.img_name} >
-             <span>{state.onePokemon.name}</span>
+            
               <img src={state.onePokemon.img} alt="Pokemon" className={styles.img}/>
               </div>
              <div className={styles.stats}>  
+              <span className={styles.name_pokemon}>
+                { state.onePokemon.name[0].toUpperCase() + state.onePokemon.name.slice(1)}
+              </span>
               <span>health: {state.onePokemon.health}</span>
               <span>Types: {state.onePokemon.type}</span>
               <span>Attack: {state.onePokemon.attack}</span>

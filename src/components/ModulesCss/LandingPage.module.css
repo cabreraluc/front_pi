@@ -1,27 +1,69 @@
 
 .container{
     display: flex;
-    justify-content: center;
+    width: 90%;
     align-items: center;
-   
+    flex-direction: column;
     min-height:40rem;
+    margin: 0 auto;
+    background-color: white;
 }
 
+
+.header{
+    display:flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: start;
+ 
+    border-bottom: solid 1px;
+    border-color: #444;
+    
+   width: 100%;
+   background-color: white;
+
+}
+
+.header button{
+    font-size: auto;
+  
+    border-color: transparent;
+    background-color:transparent;
+    border :0;
+    outline: none;
+ 
+    font-family: 'Quicksand', cursive;  
+    font-weight: 600;
+    color:  rgb(109, 58, 217);
+    border-radius: 9999px;
+    padding: 0.7rem;
+    transition: 0.2s;
+    margin: 0.5rem;
+    cursor: pointer;
+}
 .container_sub{
+
     font-size: large;
     font-family: 'Silkscreen', cursive;
     display: flex;
     flex-direction: row;
-    border-radius: 2rem;
+    border-top-right-radius: 99rem;
+    border-bottom-left-radius: 99rem;
+    border-top-left-radius: -30rem;
     width: 90%;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(205, 202, 243);
+    margin: auto auto;
+
 
 }
 
 .button{
     
-    font-size: xx-large;
+    font-size: large;
   
     border-color: transparent;
     background-color:transparent;
@@ -29,7 +71,7 @@
     outline: none;
     font-family: 'Quicksand', cursive;  
     font-weight: 100;
-    color:  rgb(255, 255, 255);
+    color:  rgb(109, 58, 217);
      border-radius: 9999px;
     padding: 1rem;
     width: 16rem;
@@ -38,7 +80,7 @@
 }
 
 .button:hover{
-    font-size: xx-large;
+    font-size: large;
    
     border-color: transparent;
     background-image: linear-gradient(to right,  rgb(115, 89, 171),  rgb(130, 108, 178),  rgb(115, 89, 171))
@@ -66,7 +108,7 @@
 
 
 .body{
-    color:  rgb(255, 253, 253);
+    color:  rgb(109, 58, 217);
     font-family: 'Quicksand', cursive;  
     display: flex;
     flex-direction: column;
