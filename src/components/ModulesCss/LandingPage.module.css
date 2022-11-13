@@ -157,13 +157,13 @@
 @keyframes cambio {
     16.66% {
         margin-left: 0;
-        opacity: 100%; 
+       
     }
 
 
     33.33% {
         margin-left: -100%;
-        opacity: 100%; 
+     
     }
     
 
