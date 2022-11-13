@@ -63,188 +63,59 @@
 .card{
     display: flex;
     flex-direction: row;
-    background-color: rgb(208, 204, 239);
+    background-color: rgb(155, 150, 192);
     margin: 1rem;
     justify-content: center;
-    justify-content: space-evenly;
+   justify-content:flex-start;
+   flex-wrap: wrap;
 
 }
-.card img{
-  max-width: 5rem;
 
+.img_box{
+    background-color: rgb(137, 131, 184);
+    width:50%;
+}
+
+.img_box img{
+max-width: 7rem;
+  
 }
 
 .card_data{
-  margin: 1rem;  
-  
-  margin-left: 5rem;
+font-size: medium;
+display: flex;
+flex-direction: column;
+justify-content: center;
+width: 50%;
+
 }
 .card_data h3{
-    font-size: auto;
+    font-size: medium;
    
 }
 
-.buttons_card{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    
-}
 
-.button_restore{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(17, 126, 42);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: large;
-    box-shadow: 3px 3px 0px black;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
-    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(17, 126, 42), rgb(11, 90, 30));
-}
-.button_restore:hover{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(13, 199, 56);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: large;
-    box-shadow: 3px 3px 0px black;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
-    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(38, 182, 71), rgb(11, 90, 30));
-}
-
-
-
-.button_restore_pressed{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(17, 126, 42);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: large;
-    position: relative;
-    left: 4px;
-    top: 4px;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
-    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(17, 126, 42), rgb(11, 90, 30));
-}
-.button_restore_pressed:hover{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(13, 199, 56);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: large;
-    position: relative;
-    left: 4px;
-    top: 4px;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(17, 126, 42),rgb(17, 126, 42), rgb(17, 126, 42));
-    background-image: linear-gradient(to right,  rgb(11, 94, 31),rgb(38, 182, 71), rgb(11, 90, 30));
-}
-
-
-
-
-
-
-
-
-
-
-.button_delete{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(180, 50, 50);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: x-large;
-    box-shadow: 3px 3px 0px black;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
-    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(180, 50, 50),rgb(140, 32, 32));
-
-
-}
-
-.button_delete:hover{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(255, 0, 0);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: x-large;
-    box-shadow: 3px 3px 0px black;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
-    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(222, 28, 28),rgb(140, 32, 32));
-
-}
-
-.button_delete_pressed{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(180, 50, 50);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: x-large;
-    position: relative;
-    left: 4px;
-    top: 4px;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
-    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(180, 50, 50),rgb(140, 32, 32));
-
-   
-}
-.button_delete_pressed:hover{
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5rem;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    background-color:rgb(255, 0, 0);
-    border: solid 1px;
-    border-color: rgb(0, 0, 0);
-    font-size: x-large;
-    position: relative;
-    left: 4px;
-    top: 4px;
-    cursor: pointer;
-    background-image: -webkit-linear-gradient(to right, rgb(141, 34, 34),rgb(180, 50, 50),rgb(138, 35, 35));
-    background-image: linear-gradient(to right,  rgb(140, 30, 30),rgb(222, 28, 28),rgb(140, 32, 32));
-
-}
 
 .empty{
     background-color:transparent;
     font-size:medium ;
     color: rgb(0, 0, 0);
+}
+
+.buttons_card button{
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.buttons_card{
+ 
+    display: flex;
+    width: 100%;
+    justify-content:space-evenly;
+    background-color: rgb(197, 194, 227);
+    
+    
+align-items: flex-end;
 }
