@@ -138,7 +138,7 @@
     display: flex;
     padding: 0;
     width: 300%;
-    animation: cambio 20s infinite;
+    animation: cambio 15s infinite;
     animation-timing-function: ease;
     align-items: center;
 
@@ -155,51 +155,33 @@
 
 }
 @keyframes cambio {
-    10% {
+    16.66% {
         margin-left: 0;
+        opacity: 100%; 
     }
 
 
-    15.5% {
+    33.33% {
         margin-left: -100%;
+        opacity: 100%; 
     }
-    25% {
-        margin-left: -100%;
-    }
+    
 
-
-
-    33% {
+    49.99% {
         margin-left: -200%;
     }
 
-    50% {
+    66.65%{
         margin-left: -200%;
     }
 
-    60% {
+    83.31%{
         margin-left: -100%;
-    }
-
-
-    65.5% {
-        margin-left: -100%;
-    }
-    75% {
-        margin-left: -100%;
-    }
-
-
-
-    83% {
-        margin-left: -0%;
     }
 
     100% {
         margin-left: -0%;
     }
-    
-    
 
 
 }
