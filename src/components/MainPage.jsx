@@ -15,7 +15,7 @@ import img from "../imagen-flecha.png"
 import {VscDebugRestart} from "react-icons/vsc"
 import {IoIosOptions} from "react-icons/io"
 import Swal from 'sweetalert2'
-
+import {VscClose} from "react-icons/vsc"
 
 
 
@@ -34,6 +34,7 @@ function MainPage(props){
     const [current, setCurrent] =  useState(1)
     const [tipos, setTipos] =  useState({info:[]})
     const [sendToTrash, setSendToTrash] = useState({lista:[]})
+    const [showOptions, setShowOptions] = useState(false)
     
    
 
@@ -68,12 +69,32 @@ function MainPage(props){
     setCurrent(1)
    }
    
-   const handleRestorePokemons = ()=>{
-    props.restorePokemons()
-    props.state.onePokemon = {}
-    setTimeout(() => {
-      props.getPokemons()
-    }, 800);
+   const handleRestorePokemons = ()=>{ 
+    let timerInterval
+    Swal.fire({
+        title: 'Restoring Pokemons deleted...',
+        html: '',
+        timer: 2000,
+        timerProgressBar: false,
+        didOpen: () => {
+          props.restorePokemons()
+          props.state.onePokemon = {}
+          Swal.showLoading()
+          const b = Swal.getHtmlContainer().querySelector('b')
+          timerInterval = setInterval(() => {
+            b.textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+          window.location.reload()
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss === Swal.DismissReason.timer) {
+          console.log('I was closed by the timer')
+        }
+      })
    
 
    }
@@ -113,13 +134,34 @@ function MainPage(props){
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-
+  
         deletePokemons(sendToTrash.lista)
-        setTimeout(() => {
-          props.getPokemons()
-        }, 800);
-       
-      }
+      
+        let timerInterval
+        Swal.fire({
+            title: 'Sending to trash!',
+            html: '',
+            timer: 2000,
+            timerProgressBar: false,
+            didOpen: () => {
+              Swal.showLoading()
+              const b = Swal.getHtmlContainer().querySelector('b')
+              timerInterval = setInterval(() => {
+                b.textContent = Swal.getTimerLeft()
+              }, 100)
+            },
+            willClose: () => {
+              clearInterval(timerInterval)
+              window.location.reload()
+            }
+          }).then((result) => {
+            /* Read more about handling dismissals below */
+            if (result.dismiss === Swal.DismissReason.timer) {
+              console.log('I was closed by the timer')
+            }
+          })
+     
+    }
     })
 
    }
@@ -144,93 +186,132 @@ function MainPage(props){
 
 <div className={styles.content}>
  
+                <div
+                className={styles.sliceOptions} 
+                style={showOptions?{
+                  "position":"absolute",
+                  "margin-left":"-0%",
+                  "display":"flex",
+                  "flexDirection":"column",
+                  "backgroundColor":"rgb(0, 0, 0,0.9)",
+                  "width":"100%",
+                 
+                  "transition":"0.5s",
+                  "zIndex":"3",
+                  "paddingBottom":"3rem"
+                }:{
+                  "position":"absolute",
+                  "margin-left":"-200%",
+                  "display":"flex",
+                  "flexDirection":"column",
+                  "backgroundColor":"rgb(0, 0, 0,0.9)",
+                  "width":"100%",
+                 
+                  "paddingBottom":"3rem",
+                  "transition":"0.5",
+                  "zIndex":"3"
+                }
+                }>
+                  <div className={styles.buttonCloseOptionsBox}>
+                  <button
+                  onClick={()=>setShowOptions(!showOptions)}
+                  className={styles.buttonCloseOptions}
+                  ><VscClose/></button>
+                  </div>
+                 
+                  <div className={styles.filter_box}>
+                   
+                   <form>
+                     <label className={styles.filter_text}>Api/Db</label>
+                     <select className={styles.filters} name="" id="" onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
+                       <option disabled={true} value= "base">-------</option>
+                       <option value="api">API</option>
+                       <option value="db">DB</option>
+                     </select>
+                   </form>
+                   
+                   <form>
+                     <label className={styles.filter_text}>By attack</label>
+                     <select className={styles.filters} onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
+                       <option  disabled={true} value="base">-------</option>
+                       <option value="fuerte">Strongest</option>
+                       <option value="debil">Weaknest</option>
+                     </select>
+                   </form>
+                   
+                   <form>
+                     <label className={styles.filter_text}>Alphabetic</label>
+                     <select  className={styles.filters} name="" id=""  onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
+                       <option disabled={true} value="base">-------</option>
+                       <option value="a-z">A-Z</option>
+                       <option value="z-a">Z-A</option>
+                     </select>
+                   </form>
                 
+                   <form>
+                   <label className={styles.filter_text}>Type</label>
+                     <select  className={styles.filters} name="tipos" onChange={(event)=>{tiposSelector(event.target.value)}} defaultValue="base">
+                       <option  disabled={true} value="base">-------</option>
+                       {props.state.tipos.map(element => {
+                         return(<option value={element.name}>{element.name}</option>)
+                       })}
+                     </select>
+                   </form>
+
+                     
+                      
+                    
+
+                       {/* <div>
+                         {tipos.info.map(elemento => {
+                           return (
+                             <div>
+                             <label>{elemento}</label>
+                            <button onClick={()=>{
+                             
+                               tiposSelector(elemento)
+                             }
+                            }>x</button>
+                            </div>
+                           )
+                         })}
+                       </div> */}
+                             <div className={styles.buttonsOptionsBox}>
+                  <button className={styles.buttonsHeader}>
+                  <Link to="/CreatePokemon"> </Link>
+                    Create Pokemon!</button >
+              
+               <button onClick={()=>{
+                        if(props.state.allPokemons.length<40){handleRestorePokemons()}
+                      }} className={styles.buttonsHeader}>Reload pokemons</button>
+                             </div>
+        </div>
+         
+
+                </div>
                    
                 <div className={styles.header}>
 
 
-                  <button className={styles.buttonsHeader_options}>
+                  <button className={styles.buttonsHeader_options}
+                  onClick={()=>setShowOptions(!showOptions)}
+                  >
                     <IoIosOptions/>
                   </button>
                 
-                    <button onClick={()=>{
-                      props.getPokemons()
-                      props.state.onePokemon = {}
-                      }} className={styles.buttonsHeader}>Show all Pokemons!</button>
+                    
     <SearchBar handleReset={handleReset} ></SearchBar>
-                      <button onClick={()=>{
-                        if(props.state.allPokemons.length<40){handleRestorePokemons()}
-                      }} className={styles.buttonsHeader}>Reload pokemons</button>
-
+               
                      
-                   <Link to="/CreatePokemon">
-                  <button className={styles.buttonsHeader}>Create Pokemon!</button >
-               </Link>
+                 
                
                   </div>      
               
- 
+                  
 
                   <div>
                 
-                    <div className={styles.filter_box}>
-                   
-                    <form>
-                      <label className={styles.filter_text}>Api/Db</label>
-                      <select className={styles.filters} name="" id="" onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
-                        <option disabled={true} value= "base">-------</option>
-                        <option value="api">API</option>
-                        <option value="db">DB</option>
-                      </select>
-                    </form>
                     
-                    <form>
-                      <label className={styles.filter_text}>By attack</label>
-                      <select className={styles.filters} onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
-                        <option  disabled={true} value="base">-------</option>
-                        <option value="fuerte">Strongest</option>
-                        <option value="debil">Weaknest</option>
-                      </select>
-                    </form>
-                    
-                    <form>
-                      <label className={styles.filter_text}>Alphabetic</label>
-                      <select  className={styles.filters} name="" id=""  onChange={(event)=>restSelector(event.target.value)} defaultValue="base">
-                        <option disabled={true} value="base">-------</option>
-                        <option value="a-z">A-Z</option>
-                        <option value="z-a">Z-A</option>
-                      </select>
-                    </form>
-                 
-                    <form>
-                    <label className={styles.filter_text}>Type</label>
-                      <select  className={styles.filters} name="tipos" onChange={(event)=>{tiposSelector(event.target.value)}} defaultValue="base">
-                        <option  disabled={true} value="base">-------</option>
-                        {props.state.tipos.map(element => {
-                          return(<option value={element.name}>{element.name}</option>)
-                        })}
-                      </select>
-                    </form>
-
-                      
-                       
-                     
-
-                        {/* <div>
-                          {tipos.info.map(elemento => {
-                            return (
-                              <div>
-                              <label>{elemento}</label>
-                             <button onClick={()=>{
-                              
-                                tiposSelector(elemento)
-                              }
-                             }>x</button>
-                             </div>
-                            )
-                          })}
-                        </div> */}
-         </div>
                 <div className={styles.delete_box}>
                       {sendToTrash.lista.length?
                       ( <button onClick={()=>{
@@ -247,9 +328,14 @@ function MainPage(props){
                    
 
                   <div className={styles.body}>
+                    
                     <div className={styles.trash_box}>
+                    <button onClick={()=>{
+                      props.getPokemons()
+                      props.state.onePokemon = {}
+                      }}  className={styles.trash}>Show all!</button>
                       <Link to="/Trash">
-                       <button className={styles.trash}>
+                       <button  className={styles.trash}>
                         <FaRegTrashAlt /> Recycle bin
                        </button>
                       </Link>

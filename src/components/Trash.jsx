@@ -38,7 +38,7 @@ function aplicarCambios(){
 
 function handlerDelete(element){
     Swal.fire({
-        title: 'Are you want to delete permanently this pokemon?',
+        title: 'Are you sure you want to delete permanently this pokemon?',
         showCancelButton: true,
         confirmButtonText: 'Yes',
       }).then((result) => {
@@ -49,8 +49,8 @@ function handlerDelete(element){
            
             let timerInterval
 Swal.fire({
-  title: 'Auto close alert!',
-  html: 'Deleting',
+  title: 'Deleting...',
+  html: '',
   timer: 2000,
   timerProgressBar: false,
   didOpen: () => {
@@ -81,7 +81,7 @@ Swal.fire({
 
 function handlerRestore(element){
     Swal.fire({
-        title: 'Are you want to restore this pokemon?',
+        title: 'Restore this pokemon?',
         showCancelButton: true,
         confirmButtonText: 'Yes',
       }).then((result) => {
@@ -92,8 +92,8 @@ function handlerRestore(element){
           
             let timerInterval
             Swal.fire({
-                title: 'Auto close alert!',
-                html: 'Restoring',
+                title: 'Restoring...',
+                html: '',
                 timer: 2000,
                 timerProgressBar: false,
                 didOpen: () => {
