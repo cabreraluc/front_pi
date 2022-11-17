@@ -277,9 +277,9 @@ function MainPage(props){
                          })}
                        </div> */}
                              <div className={styles.buttonsOptionsBox}>
+                             <Link to="/CreatePokemon"> 
                   <button className={styles.buttonsHeader}>
-                  <Link to="/CreatePokemon"> 
-                    Create Pokemon!</Link></button >
+                    Create Pokemon!</button ></Link>
               
                <button onClick={()=>{
                         if(props.state.allPokemons.length<40){handleRestorePokemons()}
