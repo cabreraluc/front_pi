@@ -5,7 +5,8 @@ import {Link} from "react-router-dom"
 import { useEffect, useMemo, useState } from "react"
 import styles from "./ModulesCss/createPokemon.module.css"
 import { editableInputTypes } from "@testing-library/user-event/dist/utils"
-
+import axios from "axios"
+import Swal from "sweetalert2"
 
 
 
@@ -41,21 +42,56 @@ export default  function CreateTuPokemon(){
         img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/768px-Pok%C3%A9_Ball_icon.svg.png"
     })
 
+    let [error, setError] = useState({})
+
   
     const subirAlState = (event)=>{
-        if(event.target.name=="name" && onlyCharacters.test(event.target.value) && event.target.value.length<10 || event.target.value=== ""){
+   
+
+        if(event.target.name=="name"){
             setFormulario((prevState)=>{
             return{
                 ...prevState,
-                [event.target.name]:event.target.value}})
+                [event.target.name]:event.target.value}
+            })
         }
 
-        if(event.target.name==="img" && ValidURL(event.target.value)){
-            setFormulario((prevState)=>{
-                return{
-                    ...prevState,
-                    [event.target.name]:event.target.value}})
+                if(event.target.name=="name" && onlyCharacters.test(event.target.value) && event.target.value.length<15 ){
+                    setError((prevState)=>{
+                    return{
+                        ...prevState,
+                        [event.target.name]:""}
+                    })
+                }               
+        
+        if(event.target.name=="name" && !onlyCharacters.test(event.target.value)){
+            setError((prevState)=>{
+            return{
+                ...prevState,
+                [event.target.name]:"Names with numbers are not allowed"}
+            })
+            console.log(error.name)
         }
+
+        if(event.target.name=="name" && event.target.value.length>15){
+            setError((prevState)=>{
+            return{
+                ...prevState,
+                [event.target.name]:"The maximum number of characters is 15"}
+            })
+            console.log(error.name)
+        }
+
+        if(event.target.name=="name" && event.target.value=== ""){
+            setError((prevState)=>{
+            return{
+                ...prevState,
+                [event.target.name]:"Write a name"}
+            })
+            console.log(error.name)
+        }
+
+    
         if(OnlyNumbers.test(event.target.value) && event.target.value.length<5 && event.target.value!== "" && event.target.name!=="name" ){
           
             setFormulario((prevState)=>{
@@ -66,10 +102,50 @@ export default  function CreateTuPokemon(){
     }
 
 
+    const uploadImage = async (e) => {
+        const files = e.target.files[0]
+        const data = new FormData()
+    
+        data.append('file', files)
+        data.append('upload_preset', 'artket')
+        data.append("api_key", "194228613445554")
+        let timerInterval
+Swal.fire({
+  title: 'Loading...',
+  html: '',
+  timer: 2000,
+  timerProgressBar: false,
+  didOpen: () => {
+    Swal.showLoading()
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+        const res = await axios.post('https://api.cloudinary.com/v1_1/daxy95gra/image/upload',
+          data, {
+          headers: { "X-Requested-With": "XMLHttpRequest" }
+        }
+        ).then(response => {
+          const imagen = response.data
+          const fileURL = imagen
+          setFormulario({ ...formulario, img: fileURL.secure_url })
+    
+        }).catch(function (error) {
+          console.log(error);
+        });
+    
+      }
+
 
 
     const condition= useMemo(()=>{
-        if(formulario.name!==""){return false}
+        if(error.name===""){return false}
         return true
     },[formulario])
     
@@ -83,9 +159,27 @@ export default  function CreateTuPokemon(){
 
     const enviar = ()=>{
         dispatch(postPokemon(formulario))
-        setTimeout(() => {
+        let timerInterval
+        Swal.fire({
+          title: 'Creating...',
+          html: '',
+          timer: 2000,
+          timerProgressBar: false,
+          didOpen: () => {
+            Swal.showLoading()
+          },
+          willClose: () => {
             window.location.href = "/MainPage"
-        }, 300);
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          /* Read more about handling dismissals below */
+          if (result.dismiss === Swal.DismissReason.timer) {
+            console.log('I was closed by the timer')
+          }
+        })
+            
+      
       
     }
 
@@ -122,6 +216,7 @@ export default  function CreateTuPokemon(){
                 <div className={styles.inputs}>
                  <span className={styles.text}>Name*</span>
                  <input   value={formulario.name} name="name" onChange={(event) => {subirAlState(event)}} className={styles.inputText}/>
+                 <span className={styles.text} style={{color:"red"}}>{error.name}</span>
                  <span className={styles.text}>Heatlh</span>
                  <input  value={formulario.health} name="health"onChange={(event) => {subirAlState(event)}} className={styles.inputText}/>
                  <span className={styles.text}>Attack damage</span>
@@ -136,7 +231,7 @@ export default  function CreateTuPokemon(){
                  <span className={styles.text} >Weight</span>
                  <input  value={formulario.weight}  name="weight" onChange={(event) => {subirAlState(event)}}className={styles.inputText}/>
                  <span className={styles.text}>Picture</span>
-                 <input name="img" onChange={(event) => {subirAlState(event)}} className={styles.inputText}/>
+                 <input type="file" name="img" onChange={(event) => {uploadImage(event)}} className={styles.inputText}/>
                 </div>  
                </form>
                 </div>
