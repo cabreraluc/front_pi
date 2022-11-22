@@ -41,8 +41,8 @@ export default  function CreateTuPokemon(){
         type:[],
         img:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/768px-Pok%C3%A9_Ball_icon.svg.png"
     })
-
     let [error, setError] = useState({})
+    let [loading, setLoading] = useState(false)
 
   
     const subirAlState = (event)=>{
@@ -102,6 +102,30 @@ export default  function CreateTuPokemon(){
     }
 
 
+
+    const load = () =>{
+      
+    let timerInterval
+      Swal.fire({
+        title: 'Loading...',
+        html: '',
+        timer: 2000,
+        timerProgressBar: false,
+        didOpen: () => {
+          Swal.showLoading()
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        /* Read more about handling dismissals below */
+        if (result.dismiss !== Swal.DismissReason.timer) {
+         load()
+        }
+      })
+    }
+
+
     const uploadImage = async (e) => {
         const files = e.target.files[0]
         const data = new FormData()
@@ -109,24 +133,8 @@ export default  function CreateTuPokemon(){
         data.append('file', files)
         data.append('upload_preset', 'artket')
         data.append("api_key", "194228613445554")
-        let timerInterval
-Swal.fire({
-  title: 'Loading...',
-  html: '',
-  timer: 2000,
-  timerProgressBar: false,
-  didOpen: () => {
-    Swal.showLoading()
-  },
-  willClose: () => {
-    clearInterval(timerInterval)
-  }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log('I was closed by the timer')
-  }
-})
+        load()
+
         const res = await axios.post('https://api.cloudinary.com/v1_1/daxy95gra/image/upload',
           data, {
           headers: { "X-Requested-With": "XMLHttpRequest" }
@@ -158,6 +166,7 @@ Swal.fire({
  
 
     const enviar = ()=>{
+      if(error.name==="" && formulario.name!==""){
         dispatch(postPokemon(formulario))
         let timerInterval
         Swal.fire({
@@ -178,8 +187,21 @@ Swal.fire({
             console.log('I was closed by the timer')
           }
         })
+      }else if(formulario.name===""){
+        Swal.fire({
+          title: 'Write a name for you Pokemon! ',
+          showCancelButton: false,
+          confirmButtonText: 'Ok',
+        })
+      }else{
+        Swal.fire({
+          title: 'Wrong name format ',
+          showCancelButton: false,
+          confirmButtonText: 'Ok',
+        })
+       
             
-      
+      }
       
     }
 
@@ -253,7 +275,7 @@ Swal.fire({
                  </div>
                </div>
 
-               <button  onClick={enviar} disabled={condition} type="submit" className={styles.button_create}>Create!</button>
+               <button  onClick={enviar} type="submit" className={styles.button_create}>Create!</button>
                
             </div>
             </div>
