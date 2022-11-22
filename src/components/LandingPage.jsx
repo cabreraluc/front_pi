@@ -22,7 +22,7 @@ export default function LandingPage(){
             </div>
             <div className={styles.container_sub}>
             <div className={styles.body}>
-              <h1>Welcome to the pokedex</h1>
+              <h1>Welcome to the pokedex 2.0</h1>
                 
              <Link to = "/MainPage">
              <button className={styles.button}>
