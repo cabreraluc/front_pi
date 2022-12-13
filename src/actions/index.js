@@ -6,7 +6,7 @@ import {GET_POKEMONS, FILTER_BY_TYPE_, RESTORE_POKEMONS,DELETE_POKEMONS, GET_POK
 export function getPokemons(){
 
        return async function(dispatch){
-      const a = await fetch("https://pokedex-h.herokuapp.com/pokemons/")
+      const a = await fetch("https://backendpi-96qn.onrender.com/pokemons/")
       const b = await a.json()
     
         dispatch({
@@ -18,7 +18,7 @@ export function getPokemons(){
 export function restorePokemons(){
 
   return async function(dispatch){
- const a = await fetch("https://pokedex-h.herokuapp.com/pokemons/restorePokemons")
+ const a = await fetch("https://backendpi-96qn.onrender.com/pokemons/restorePokemons")
  const b = await a.json()
 
    dispatch({
@@ -32,7 +32,7 @@ export function restorePokemons(){
 export function getTrash(){
 
   return async function(dispatch){
-  const a = await fetch("https://pokedex-h.herokuapp.com/deleted")
+  const a = await fetch("https://backendpi-96qn.onrender.com/deleted")
 
   const b = await a.json()
   if(b.message){dispatch({type:GET_TRASH,payload:b})}
@@ -50,7 +50,7 @@ export const getPokemonsByName = (name)=>{
 
 
             return function(dispatch) {
-                return fetch(`https://pokedex-h.herokuapp.com/pokemons?name=${name}`)
+                return fetch(`https://backendpi-96qn.onrender.com/pokemons?name=${name}`)
                   .then(response => response.json())
                   .then(json => {
                     dispatch({ type: GET_POKEMONS_BY_NAME, payload: json });
@@ -62,7 +62,7 @@ export const getPokemonsByName = (name)=>{
 export const getPokemonsById = (id)=>{
     
         return function(dispatch) {
-            return fetch(`https://pokedex-h.herokuapp.com/pokemons/${id}`)
+            return fetch(`https://backendpi-96qn.onrender.com/pokemons/${id}`)
               .then(response => response.json())
               .then(json => {
                 dispatch({ type: GET_POKEMONS_BY_ID, payload: json });
@@ -74,7 +74,7 @@ export const getPokemonsById = (id)=>{
 export const getTypes= ()=>{
 
         return function(dispatch) {
-            return fetch(`https://pokedex-h.herokuapp.com/types`)
+            return fetch(`https://backendpi-96qn.onrender.com/types`)
               .then(response => response.json())
               .then(json => {
                 dispatch({ type: GET_TYPES, payload: json });
