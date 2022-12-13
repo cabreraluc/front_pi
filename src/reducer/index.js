@@ -80,7 +80,7 @@ switch (type) {
             }
     }
      case POST_POKEMON:{
-          fetch("https://pokedex-h.herokuapp.com/pokemons/",{
+          fetch("https://backendpi-96qn.onrender.com/pokemons/",{
               method: "POST",
               headers:{"Accept": "application/json",
              "Content-Type":"application/json"},
