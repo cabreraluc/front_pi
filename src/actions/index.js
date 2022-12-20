@@ -84,10 +84,15 @@ export const getTypes= ()=>{
 
 
 export const postPokemon=  (payload)=>{
-  
-  return{
-    type: POST_POKEMON, payload
-  }
+  fetch("https://backendpi-96qn.onrender.com/pokemons/", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(payload),
+  });
 }
 
 export const filterBd= ()=>{
@@ -151,3 +156,39 @@ export const fuegoVolador = () =>{
   }
 }
 
+export const deletePokemons = (lista)=>{
+ 
+  fetch("https://backendpi-96qn.onrender.com/delete",{
+          method: "POST",
+          headers:{"Accept": "application/json",
+         "Content-Type":"application/json"},
+                        
+       body:JSON.stringify(lista)
+          }
+      )
+}
+
+export const deleteFromTrash = (lista)=>{
+  fetch("https://backendpi-96qn.onrender.com/deleteFromTrash",{
+       method: "POST",
+       headers:{"Accept": "application/json",
+      "Content-Type":"application/json"},
+                     
+    body:JSON.stringify(lista)
+       }
+   )
+}
+
+
+
+
+export const restoreFromTrash = (lista)=>{
+   fetch("https://backendpi-96qn.onrender.com/RestoreFromTrash",{
+        method: "POST",
+        headers:{"Accept": "application/json",
+       "Content-Type":"application/json"},
+                      
+     body:JSON.stringify(lista)
+        }
+    )
+}

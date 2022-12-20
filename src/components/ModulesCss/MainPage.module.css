@@ -1,321 +1,289 @@
-.container{
-   display: flex;
+.container {
+  display: flex;
   margin: 0px auto;
-  width: 90%;
-
-    flex-wrap:wrap ;
+  
+    min-height: 100vh;
+  flex-wrap: wrap;
   justify-content: center;
-
-
-background-color: white;  
+ 
+  background-color: white;
 }
 
-
-
-.content{
- display: flex;
+.content {
+  display: flex;
   border-radius: 1rem;
- flex-direction: column;
- align-items: center;
- flex-wrap:wrap ;
-}
-.body{
-    display: flex;
-    margin-top: 2rem;
-    width: 95%;
-
-   background-color: rgb(121, 109, 157);
-  
-    border-radius: 1rem;
-    
-    padding-bottom: 2rem;
-   
-    justify-content: center;
-    flex-direction: column;
-}
-
-
-
-
-
-.header{
-   display:flex;
-
-   align-items: center;
-   flex-wrap: wrap;
-   justify-content: center;
-justify-content: space-evenly;
-   border-bottom: solid 1px;
-   border-color: #444;
-   
+  flex-direction: column;
+  align-items: center;
   width: 100%;
- 
+  flex-wrap: wrap;
+}
+.body {
+  display: flex;
+  margin-top: 2rem;
+  width: 95%;
+
+  background-color: rgb(121, 109, 157);
+
+  border-radius: 1rem;
+
+  padding-bottom: 2rem;
+
+  justify-content: center;
+  flex-direction: column;
 }
 
-.buttonsHeader{
-    font-size: auto;
-  
-    border-color: transparent;
-    background-color:rgb(119, 96, 192);
-    border :0;
-    outline: none;
-    width: 10rem;
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color: white;
-    border-radius: 9999px;
-    padding: 0.7rem;
-    transition: 0.2s;
-    margin: 1rem;
-  
-}
-.buttonsHeader:hover{
+.header {
+  display: flex;
 
-    transition: .4s;
-   color: white;
-    cursor: pointer;
-    transition: 0.2s;
-background-color:  rgb(115, 89, 171);    
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  border-bottom: solid 1px;
+  border-color: #444;
+
+  width: 100%;
 }
 
-.buttonsHeader_options{
-    font-size: x-large;
-  
-    border-color: transparent;
-    background-color:transparent;
-    border :0;
-    outline: none;
- 
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color:  rgb(109, 58, 217);
-    border-radius: 9999px;
-    padding: 0.7rem;
-    transition: 0.2s;
-    cursor: pointer;
-    
+.buttonsHeader {
+  font-size: auto;
+
+  border-color: transparent;
+  background-color: rgb(119, 96, 192);
+  border: 0;
+  outline: none;
+  width: 10rem;
+  font-family: "Quicksand", cursive;
+  font-weight: 600;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.7rem;
+  transition: 0.2s;
+  margin: 1rem;
+}
+.buttonsHeader:hover {
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: rgb(115, 89, 171);
 }
 
-.filter_box{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-   
-    
+.buttonsHeader_options {
+  font-size: x-large;
+
+  border-color: transparent;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+
+  font-family: "Quicksand", cursive;
+  font-weight: 600;
+  color: rgb(109, 58, 217);
+  border-radius: 9999px;
+  padding: 0.7rem;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.filter_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.filter_text {
+  font-size: small;
+  color: white;
+  margin: 0 1rem;
+}
+
+.filters {
+  font-size: small;
+  font-family: "Quicksand";
+  color: #444;
+  line-height: 1.3;
+
+  width: 10rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 20px auto;
+  margin-right: 1rem;
+  margin-left: 0.2rem;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  background-color: white;
+}
+
+.boton_delete {
+  font-size: small;
+  font-family: "Quicksand";
+  color: red;
+  border: 1px solid rgb(255, 0, 0);
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  height: 2rem;
+  background-color: transparent;
+}
+.boton_delete:hover {
+  font-size: small;
+  font-family: "Quicksand";
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 0, 0);
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  height: 2rem;
+  background-color: red;
+  transition: 0.4s;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    rgb(182, 8, 8),
+    rgb(221, 21, 21),
+    rgb(166, 14, 14)
+  );
+}
+
+.delete_box {
+  display: flex;
+  justify-content: center;
+}
+
+.trash {
+  font-size: small;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border: 0;
+  padding: 1rem;
+
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.trash_box {
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 1rem;
+}
+
+.delete_box_button {
+  width: 50%;
+}
+
+.text {
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  min-height: 23.5rem;
+  align-items: center;
+}
+
+.cards_arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotateCards {
+}
+
+.prueba {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  width: 100%;
+  justify-content: center;
+  animation-name: aLaDerecha;
+  animation-duration: 500ms;
+}
+
+.buttonAllPokemons {
+  border-radius: 5px;
+  font-family: "Quicksand", cursive;
+}
+
+.buttonsNavegation {
+  border-color: transparent;
+
+  border: 0;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  width: 2%;
+}
+
+.buttonsNavigation {
+  font-size: small;
+  font-family: "Quicksand";
+  color: #444;
+  line-height: 1.3;
+
+  width: 32px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0.5rem 0.5rem;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.03);
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.footer_info {
+  background-color: rgb(61, 52, 90);
+  font-size: x-small;
+  width: 100%;
+}
+.footer_info p {
+  color: white;
+}
+
+.textInButtonNavegation {
+  transform: scale(1, 10);
+  font-weight: 100;
+  color: rgb(164, 151, 193);
+}
+
+.textInButtonNavegation_disabled {
+  transform: scale(1, 10);
+  font-weight: 100;
+  color: rgb(164, 151, 193);
+  opacity: 20%;
+}
+
+.numbers_nav_box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.buttonCloseOptionsBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonCloseOptions {
+  margin: 1rem 1rem;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
 }
 
 
-.filter_text{
-    font-size: small;
-    color: white;
-    margin: 0 1rem;
-}
-
-.filters{
-       
-        font-size: small;
-        font-family: 'Quicksand';
-        color: #444;
-        line-height: 1.3;
-     
-        width: 10rem;
-        max-width: 100%; 
-        box-sizing: border-box;
-       margin: 20px auto;
-       margin-right: 1rem;
-       margin-left: 0.2rem;
-        border: 1px solid #aaa;
-        box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-        border-radius: .3em;
-       background-color: white;
-      }
-
-
-     
-
-.boton_delete{
-    font-size: small;
-    font-family: 'Quicksand';
-    color: red;
-    border: 1px solid rgb(255, 0, 0);
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-    border-radius: .3em;
-    height: 2rem;
-    background-color: transparent;
-}
-.boton_delete:hover{
-    font-size: small;
-    font-family: 'Quicksand';
-    color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 0, 0);
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-    border-radius: .3em;
-    height: 2rem;
-    background-color:red;
-    transition: .4s;
-    cursor: pointer;
-    background-image: linear-gradient(to right,  rgb(182, 8, 8),  rgb(221, 21, 21),  rgb(166, 14, 14))
-}
-
-.delete_box{
-  
-   display: flex;
-   justify-content: center;
-}
-
-.trash{
-    font-size: small;
-    background-color: transparent;
-    border :0;
-    outline: none;
-    border: 0;
-    padding: 1rem;
-
-    color: rgb(255, 255, 255); 
-    border-radius: 0.5rem;
-    padding: .5rem;
-    transition: .4s;
-    cursor: pointer;
-}
-
-
-.trash_box{
-display: flex;
-justify-content: space-between;
-margin: 0rem 1rem;
-}
-
-
-.delete_box_button{
- 
-    width: 50%;
-    
-}
-
-
-.text{
-    text-decoration: none;  
-}
-
-.cards{ 
-display: flex;
-flex-wrap: wrap;
-width: 100%;
-justify-content: center;
-
-}
-
-.cards_arrows{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.rotateCards{
-
-}
-
-.prueba{
-    display: grid;
-    grid-template-columns: 32% 32% 32% ;
-    width: 100%;
-    justify-content: center;
-    animation-name: aLaDerecha;
-    animation-duration: 500ms;
-    
-}
-
-
-.buttonAllPokemons{
-   
-    border-radius: 5px;
-    font-family: 'Quicksand', cursive;
-}
-
-
-
-.buttonsNavegation{
-   
-    border-color: transparent;
-  
-    border :0;
-    outline: none;
-    border: 0;
-    background-color: transparent;
-    cursor: pointer;
-   
-    width: 2%;
-
-}
-
-.buttonsNavigation{
-   
-    font-size: small;
-    font-family: 'Quicksand';
-    color: #444;
-    line-height: 1.3;
-    
-    width: 32px;
-    max-width: 100%; 
-    box-sizing: border-box;
-   margin: .5rem .5rem;
-    border: 1px solid #aaa;
-    box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
-    border-radius: .3em;
-    cursor: pointer;
-}
-
-
-.footer_info{
-   
-    background-color: rgb(61, 52, 90);
-    font-size: x-small;
-    width: 100%;
-   
-}
-.footer_info p{
-    color: white;
-   
-}
-
-
-.textInButtonNavegation{
-    transform: scale(1, 10);
-    font-weight: 100;
-    color: rgb(164, 151, 193);
-}
-
-.textInButtonNavegation_disabled{
-    transform: scale(1, 10);
-    font-weight: 100;
-    color: rgb(164, 151, 193);
-    opacity: 20%;
-}
-
-.numbers_nav_box{
-
-display: flex;
-flex-wrap: wrap;
-padding: 1rem;
-justify-content: center;
-
-}
-
-
-.buttonCloseOptionsBox{
- 
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-.buttonCloseOptions{
-    margin: 1rem 1rem;
-    background-color: transparent;
-    color: white;
-    font-size: 2rem;
-    border: none;
-    cursor: pointer;
+.Loader{
+width: 50%;
 }

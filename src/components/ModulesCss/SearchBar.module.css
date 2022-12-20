@@ -1,45 +1,37 @@
-.buttons{
-    font-size: xx-large;
-    border-radius: 9999px;
-    color: rgb(0, 0, 0);
-    font-family: 'Quicksand', cursive;
-    background-color: transparent;
-    border :0;
-    outline: none;
-    border: 0;
-  
-    margin-left: -2.5rem;
-    color: rgb(70, 35, 153); 
-    margin-bottom: -0.5rem;
-    cursor: pointer;
+.buttons {
+  font-size: xx-large;
+  border-radius: 9999px;
+  color: rgb(0, 0, 0);
+  font-family: "Quicksand", cursive;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  border: 0;
+
+  margin-left: -2.5rem;
+  color: rgb(70, 35, 153);
+  margin-bottom: -0.5rem;
+  cursor: pointer;
 }
 
+.input {
+  border-radius: 5px;
 
-.input{
-    border-radius: 5px;
-    
-  
-    background-color: rgb(217, 211, 235);
-    border-radius: 2rem;
-    border-color: transparent;
-    outline: none;
-    border: none;
-    padding-right: 3rem;
-    padding-left: 0.9rem;
-    
-    
+  background-color: rgb(217, 211, 235);
+  border-radius: 2rem;
+  border-color: transparent;
+  outline: none;
+  border: none;
+  padding-right: 3rem;
+  padding-left: 0.9rem;
 }
 
-.searchBar{
-   
-display: flex;
-align-items: center;
-justify-content: center;
+.searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    
- }
-
- .searchBar_content{
-    display: flex;
-
- }
+.searchBar_content {
+  display: flex;
+}

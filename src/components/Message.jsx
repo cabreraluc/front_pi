@@ -1,11 +1,8 @@
- import styles from "./ModulesCss/MainPage.module.css"
 
-
-export default function Message(){
-    return(
-        <div>
-          <h1>Pokemon not found
-</h1>  
-        </div>
-    )
+export default function Message(props) {
+  return (
+    <div style={{"color":props.color}}>
+      <h1>Pokemon not found</h1>
+    </div>
+  );
 }

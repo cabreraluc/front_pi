@@ -1,121 +1,106 @@
-.header{
-    display:flex;
+.header {
+  display: flex;
 
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
- justify-content: space-evenly;
-    border-bottom: solid 1px;
-    border-color: #444;
-    background-color: white;   
-   width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  border-bottom: solid 1px;
+  border-color: #444;
+  background-color: white;
+  width: 100%;
 }
-.buttonsHeader{
-    font-size: auto;
-  
-    border-color: transparent;
-    background-color:transparent;
-    border :0;
-    outline: none;
- 
-    font-family: 'Quicksand', cursive;  
-    font-weight: 600;
-    color:  rgb(109, 58, 217);
-    border-radius: 9999px;
-    padding: 0.7rem;
-    transition: 0.2s;
-    margin: 0.5rem;
-  
-    
-   ;
+.buttonsHeader {
+  font-size: auto;
+
+  border-color: transparent;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+
+  font-family: "Quicksand", cursive;
+  font-weight: 600;
+  color: rgb(109, 58, 217);
+  border-radius: 9999px;
+  padding: 0.7rem;
+  transition: 0.2s;
+  margin: 0.5rem;
 }
-.buttonsHeader:hover{
-    transition: .4s;
-    color: white;
-     cursor: pointer;
-     transition: 0.2s;
- background-color:  rgb(115, 89, 171);    
+.buttonsHeader:hover {
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: rgb(115, 89, 171);
 }
 
-.body{
-    background-color:rgb(255, 255, 255);
-    padding-bottom: 1rem;
-
+.body {
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 1rem;
 }
 
-.container{
-    max-width: 90%;
-    margin:0 auto;
-    background-color: white;   
+.container {
+  margin: 0 auto;
+  background-color: white;
 }
 
-
-
-.card_box{
-        background-color: white;   
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
-    margin:2rem;
-    background-color: white;   
+.card_box {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin: 2rem;
+  background-color: white;
 }
 
-.card{
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(155, 150, 192);
-    margin: 1rem;
-    justify-content: center;
-   justify-content:flex-start;
-   flex-wrap: wrap;
-
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(155, 150, 192);
+  margin: 1rem;
+  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.img_box{
-    background-color: rgb(137, 131, 184);
-    width:50%;
+.img_box {
+  background-color: rgb(137, 131, 184);
+  width: 50%;
 }
 
-.img_box img{
-max-width: 7rem;
-  
+.img_box img {
+  max-width: 7rem;
 }
 
-.card_data{
-font-size: medium;
-display: flex;
-flex-direction: column;
-justify-content: center;
-width: 50%;
-
+.card_data {
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
 }
-.card_data h3{
-    font-size: medium;
-   
+.card_data h3 {
+  font-size: medium;
 }
 
-
-
-.empty{
-    background-color:transparent;
-    font-size:medium ;
-    color: rgb(0, 0, 0);
+.empty {
+  background-color: transparent;
+  font-size: medium;
+  color: rgb(0, 0, 0);
 }
 
-.buttons_card button{
-    background-color: transparent;
-    border: none;
-    font-size: x-large;
-    cursor: pointer;
+.buttons_card button {
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+  cursor: pointer;
 }
 
-.buttons_card{
- 
-    display: flex;
-    width: 100%;
-    justify-content:space-evenly;
-    background-color: rgb(197, 194, 227);
-    
-    
-align-items: flex-end;
+.buttons_card {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: rgb(197, 194, 227);
+
+  align-items: flex-end;
 }
