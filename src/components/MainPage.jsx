@@ -27,7 +27,7 @@ import { IoIosOptions } from "react-icons/io";
 import Swal from "sweetalert2";
 import MainPageSliceOptions from "./MainPageSliceOptions";
 
-let PokemonsPorPage = 6;
+let PokemonsPorPage = 12;
 
 function MainPage(props) {
   let CountOf = Math.ceil(props.state.pokemonFiltered.length / PokemonsPorPage);
@@ -212,24 +212,26 @@ function MainPage(props) {
         </div>
 
         <div className={styles.body}>
-          <div className={styles.trash_box}>
-            <button
-              onClick={() => {
-                props.getPokemons();
-                props.state.onePokemon = {};
-              }}
-              className={styles.trash}
-            >
-              Show all!
-            </button>
-            <Link to="/Trash">
+          <div className={styles.container_trash_box}>
+            <div className={styles.trash_box}>
               <button
+                onClick={() => {
+                  props.getPokemons();
+                  props.state.onePokemon = {};
+                }}
                 className={styles.trash}
-                onClick={() => (props.state.onePokemon = {})}
               >
-                <FaRegTrashAlt /> Recycle bin
+                Show all!
               </button>
-            </Link>
+              <Link to="/Trash">
+                <button
+                  className={styles.trash}
+                  onClick={() => (props.state.onePokemon = {})}
+                >
+                  <FaRegTrashAlt /> Recycle bin
+                </button>
+              </Link>
+            </div>
           </div>
 
           <div className={styles.cards_arrows}>

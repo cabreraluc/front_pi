@@ -1,11 +1,9 @@
 .container {
   display: flex;
   margin: 0px auto;
-  
-    min-height: 100vh;
+  min-height: 100vh;
   flex-wrap: wrap;
   justify-content: center;
- 
   background-color: white;
 }
 
@@ -16,6 +14,7 @@
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
+  min-height: 100vh;
 }
 .body {
   display: flex;
@@ -27,9 +26,15 @@
   border-radius: 1rem;
 
   padding-bottom: 2rem;
-
+  min-height: 90vh;
   justify-content: center;
   flex-direction: column;
+
+  position: relative;
+}
+
+.container_trash_box {
+  height: 5rem;
 }
 
 .header {
@@ -161,7 +166,7 @@
 
   color: rgb(255, 255, 255);
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 0 2rem;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -169,7 +174,11 @@
 .trash_box {
   display: flex;
   justify-content: space-between;
-  margin: 0rem 1rem;
+
+  position: absolute;
+  top: 2rem;
+
+  width: 100%;
 }
 
 .delete_box_button {
@@ -283,7 +292,6 @@
   cursor: pointer;
 }
 
-
-.Loader{
-width: 50%;
+.Loader {
+  width: 50%;
 }

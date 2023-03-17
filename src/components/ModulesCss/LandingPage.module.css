@@ -3,7 +3,7 @@
 
   align-items: center;
   flex-direction: column;
-  min-height: 40rem;
+  height: 100vh;
   margin: 0 auto;
   background-color: white;
 }
